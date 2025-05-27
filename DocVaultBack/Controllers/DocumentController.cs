@@ -1,19 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
-using DigitalDoc.Models;
+using DocVault.Models;
 using Microsoft.EntityFrameworkCore;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 
-namespace DigitalDoc.Controllers
+namespace DocVault.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class DocumentController : ControllerBase
     {
-        private readonly DigitalDocDbContext _context;
+        private readonly DocVaultDbContext _context;
         private readonly AzureBlobService _blobService;
 
-        public DocumentController(DigitalDocDbContext context, AzureBlobService blobService)
+        public DocumentController(DocVaultDbContext context, AzureBlobService blobService)
         {
             _context = context;
             _blobService = blobService;

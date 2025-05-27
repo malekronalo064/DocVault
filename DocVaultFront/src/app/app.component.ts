@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'DigitalDocFront';
+  title = 'DocVaultFront';
   loginDisplay = false;
   tokenExpiration: string = '';
   private readonly _destroying$ = new Subject<void>();
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit, OnDestroy {
   setLoginDisplay(): void {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
   }
-  
+
   checkAccount(): void {
     const account = this.authService.instance.getActiveAccount();
     if (account) {
@@ -101,7 +101,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   async callApi(): Promise<void> {
     if (!this.token) {
-      this.errorMsg = 'Veuillez vous connecter avant d\'accéder à DigitalDoc.';
+      this.errorMsg = 'Veuillez vous connecter avant d\'accéder à DocVault.';
       console.error('No token available. Please login first.');
       return;
     }

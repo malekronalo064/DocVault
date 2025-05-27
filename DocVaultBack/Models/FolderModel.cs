@@ -1,4 +1,4 @@
-namespace DigitalDoc.Models
+namespace DocVault.Models
 {
     public class Folder
     {

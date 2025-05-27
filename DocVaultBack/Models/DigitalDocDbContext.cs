@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace DigitalDoc.Models
+namespace DocVault.Models
 {
-    public class DigitalDocDbContext : DbContext
+    public class DocVaultDbContext : DbContext
     {
-        public DigitalDocDbContext(DbContextOptions<DigitalDocDbContext> options) : base(options)
+        public DocVaultDbContext(DbContextOptions<DocVaultDbContext> options) : base(options)
         {
         }
 

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using DigitalDoc.Models;
+using DocVault.Models;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
@@ -10,9 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<DigitalDocDbContext>(options => 
+builder.Services.AddDbContext<DocVaultDbContext>(options => 
 {
-    options.UseMySql("server=localhost;port=8889;database=DigitalDoc;user=root;password=root", new MySqlServerVersion(new Version(8, 0, 21)));
+    options.UseMySql("server=localhost;port=8889;database=DocVault;user=root;password=root", new MySqlServerVersion(new Version(8, 0, 21)));
 });
 builder.Services.AddScoped<AzureBlobService>();
 
@@ -22,7 +22,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen( c => 
 {
     c.SwaggerDoc("v1", new OpenApiInfo 
-    { Title = "DigitalDoc", 
+    { Title = "DocVault", 
     Version = "v1" });
 
     // Configuration pour utiliser JWT dans Swagger
@@ -88,7 +88,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => 
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DigitalDoc v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DocVault v1");
     });
 }
 app.UseCors("Angular");

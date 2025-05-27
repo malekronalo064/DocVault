@@ -1,15 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
-using DigitalDoc.Models;
+using DocVault.Models;
 
-namespace DigitalDoc.Controllers
+namespace DocVault.Controllers
 {
     [ApiController]
     [Route("api/[controller]/folder")]    
     public class FolderController : ControllerBase
     {
-        private readonly DigitalDocDbContext _context;
+        private readonly DocVaultDbContext _context;
 
-        public FolderController(DigitalDocDbContext context)
+        public FolderController(DocVaultDbContext context)
         {
             _context = context;
         }

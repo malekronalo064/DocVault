@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using DigitalDoc.Models;
+using DocVault.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DigitalDoc.Controllers
+namespace DocVault.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
 
     {
-        private readonly DigitalDocDbContext _context;
+        private readonly DocVaultDbContext _context;
 
-        public UserController(DigitalDocDbContext context)
+        public UserController(DocVaultDbContext context)
         {
             _context = context;
         }

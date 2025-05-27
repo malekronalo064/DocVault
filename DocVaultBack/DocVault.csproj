@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="..\DigitalDocFront\src\app\AppComponent.ts">
+    <TypeScriptCompile Include="..\DocVaultFront\src\app\AppComponent.ts">
       <Link>AppComponent.ts</Link>
     </TypeScriptCompile>
   </ItemGroup>

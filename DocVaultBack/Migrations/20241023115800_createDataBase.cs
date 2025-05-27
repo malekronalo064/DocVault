@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DigitalDoc.Migrations
+namespace DocVault.Migrations
 {
     /// <inheritdoc />
     public partial class createDataBase : Migration

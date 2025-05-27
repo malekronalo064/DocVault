@@ -5,7 +5,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        
+
       ],
       declarations: [
         AppComponent
@@ -19,16 +19,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DigitalDocFront'`, () => {
+  it(`should have as title 'DocVaultFront'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DigitalDocFront');
+    expect(app.title).toEqual('DocVaultFront');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, DigitalDocFront');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, DocVaultFront');
   });
 });

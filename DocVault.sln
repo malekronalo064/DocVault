@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalDoc", "DigitalDoc\DigitalDoc.csproj", "{C112917C-B08C-417D-9066-A94EBE2AA7C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocVault", "DocVault\DocVault.csproj", "{C112917C-B08C-417D-9066-A94EBE2AA7C0}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "DigitalDocFront", "DigitalDocFront\DigitalDocFront.esproj", "{CFE582E0-A7A3-4151-9E43-59951D56D3CC}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "DocVaultFront", "DocVaultFront\DocVaultFront.esproj", "{CFE582E0-A7A3-4151-9E43-59951D56D3CC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DigitalDoc.UnitTest", "DigitalDoc.UnitTest", "{60AFAC27-02A6-426B-B16D-FE1E9E75049D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DocVault.UnitTest", "DocVault.UnitTest", "{60AFAC27-02A6-426B-B16D-FE1E9E75049D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

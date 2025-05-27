@@ -1,6 +1,6 @@
-@DigitalDoc_HostAddress = http://localhost:5299
+@DocVault_HostAddress = http://localhost:5299
 
-GET {{DigitalDoc_HostAddress}}/weatherforecast/
+GET {{DocVault_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
