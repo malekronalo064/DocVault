@@ -1,0 +1,9 @@
+.home{
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  background: url('../../assets/img/DigitalDoc.png') center center / cover no-repeat;
+}
+

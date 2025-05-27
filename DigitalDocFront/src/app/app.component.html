@@ -1,0 +1,11 @@
+<app-header-menu></app-header-menu>
+<div class="main-content">
+  <app-side-menu></app-side-menu>
+  <div class="content">
+    <div *ngIf="errorMsg" class="alert alert-danger">
+      {{ errorMsg }}
+    </div>
+    <app-notification></app-notification>
+    <router-outlet></router-outlet>
+  </div>
+</div>

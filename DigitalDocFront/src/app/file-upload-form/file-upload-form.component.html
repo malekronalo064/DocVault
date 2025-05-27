@@ -1,0 +1,39 @@
+<h1>Déposez vos documents</h1>
+<form [formGroup]="fileForm" (ngSubmit)="onSubmit()">
+  <p>Les champs marqués par une * sont obligatoires</p>
+    <div class="nameInput">
+        <label for="fileName">Nom du fichier *</label>
+        <input id="fileName" formControlName="fileName" type="text" placeholder="Nom du fichier" required>
+        <button class="buttonX" type="button" *ngIf="fileForm.get('fileName')?.value" (click)="clearInput('fileName')">X</button>
+    </div>
+
+    <div class="folderNameInput">
+      <label for="folder">Dossier</label>
+      <div class="folderName">
+        <input id="folder" formControlName="folder" type="text" placeholder="Nom du dossier">
+        <ul *ngIf="showDropdown && filteredFolders.length > 0" class="foldersList">
+          <li *ngFor="let folder of filteredFolders" (click)="onFolderSelected(folder)">
+            {{ folder }}
+          </li>
+        </ul>
+      </div>
+      <button class="buttonX" *ngIf="fileForm.get('folder')?.value" (click)="clearInput('folder')">X</button>
+    </div>
+  
+    <div class="filePath">
+      <label for="fileInput">Sélectionner un fichier *</label>
+      <input class="uploadInput" id="fileInput" type="file" (change)="onFileSelected($event)" required>
+      <button class="buttonX" type="button" *ngIf="selectedFile" (click)="clearFile()">X</button>
+    </div>
+    
+    <div *ngIf="fileError" class="alert alert-danger">{{ fileError }}</div>
+
+    <button type="submit" class="button">Envoyer</button>
+
+    <!-- <div *ngIf="fileForm.get('fileName')?.invalid && fileForm.get('fileName')?.touched" class="error">
+      Le nom du fichier est requis.
+    </div> -->
+  
+    <!-- <button type="submit" class="button" [disabled]="fileForm.invalid || !selectedFile">Envoyer</button> -->
+  </form>
+  

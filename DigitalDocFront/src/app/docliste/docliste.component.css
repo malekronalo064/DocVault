@@ -1,0 +1,148 @@
+.folder-list {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  position: relative;
+}
+
+h2 {
+  color: #F58634;
+  text-align: center;
+}
+
+.folder-item {
+  margin: 30px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+  .folder-item:hover {
+    background-color: #ffd699;
+    transform: scale(1.03);
+  }
+
+.folder-header {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+  .folder-header i {
+    margin-right: 10px;
+  }
+
+.document-list {
+  padding: 0;
+  background-color: transparent;
+}
+
+.document-item {
+  margin-left: 40px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+  .document-item:hover {
+    background-color: #F58635;
+  }
+
+  .document-item i {
+    margin-right: 10px; 
+  }
+
+  .document-item span {
+    margin-left: 10px; 
+  }
+
+  .document-item img {
+    margin-left: auto; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+    
+
+.download-button img,
+.delete-button img {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 10px;
+}
+
+.add-document-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #F58634;
+  cursor: pointer;
+}
+
+  .add-document-icon:hover {
+    color: #ff6a00;
+  }
+
+
+
+.folder-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 2px solid #00aaff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+  .folder-form h3 {
+    color: #F58634;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .folder-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00aaff;
+  }
+
+  .folder-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  .folder-form button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+  }
+
+    .folder-form button:first-of-type {
+      background-color: #00aaff;
+      margin-right: 4%;
+    }
+
+    .folder-form button:last-of-type {
+      background-color: #F58634;
+    }
+
+    .folder-form button:hover {
+      opacity: 0.9;
+    }

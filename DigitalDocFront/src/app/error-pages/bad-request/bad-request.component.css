@@ -1,0 +1,12 @@
+.errorImg {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+p{
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}

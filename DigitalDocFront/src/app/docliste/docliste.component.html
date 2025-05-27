@@ -1,0 +1,38 @@
+<h2>Liste des documents</h2>
+
+<div class="folder-list">
+  <div class="add-document-icon" title="Ajouter un document" (click)="ouvrirFormulaire()">
+    <i class="fas fa-plus-circle"></i>
+  </div>
+
+  <div class="folder-item" *ngFor="let folder of folders">
+    <div class="folder-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <span (click)="toggleFiles(folder)">
+        <i class="fas fa-folder-plus"></i> {{ folder.name }}
+      </span>
+      <div *ngIf="folder.documents.length === 0" class="delete-button" (click)="supprimerDossier(folder.name)">
+        <img src="../../assets/img/delete.png" alt="Supprimer le dossier" />
+      </div>
+    </div>
+    <div class="document-list" *ngIf="folder.isOpen">
+      <div class="document-item" *ngFor="let document of folder.documents">
+        <i class="fas fa-file"></i> {{ document.name }}{{ document.extension }}
+        <div class="download-button" (click)="telechargerDocument(document.name)" style="margin-left: auto;">
+          <img src="../../assets/img/download.png" alt="Télécharger" />
+        </div>
+        <div class="delete-button" (click)="supprimerDocument(document.name)" style="margin-left: 10px;">
+          <img src="../../assets/img/delete.png" alt="Supprimer" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showForm" class="folder-form">
+  <h3>Ajouter un nouveau dossier</h3>
+  <label for="folder-name">Nom du dossier :</label>
+  <input id="folder-name" [(ngModel)]="newFolder.name" placeholder="Nom du dossier">
+
+  <button (click)="ajouterDossier()">Valider</button>
+  <button (click)="resetForm()">Annuler</button>
+</div>
