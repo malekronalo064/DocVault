@@ -7,21 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.22.2" />
+    <!-- Mise à jour Azure Storage Blobs à la dernière version stable -->
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.24.0" />
+
+    <!-- Authentification - on garde la version 8.0.x pour compatibilité .NET 8 -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
+
+    <!-- Entity Framework Core - versions stables 8.0.x -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.10" />
-    <PackageReference Include="Microsoft.Identity.Web" Version="3.2.2" />
-    <PackageReference Include="Microsoft.Identity.Web.UI" Version="3.2.2" />
-    <PackageReference Include="MySql.Data.EntityFramework" Version="9.1.0" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.14" />
+
+    <!-- Microsoft Identity Web - mise à jour à 3.9.2 pour correctifs de sécurité -->
+    <PackageReference Include="Microsoft.Identity.Web" Version="3.9.2" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="3.9.2" />
+
+    <!-- MySQL EF Core: choisir UNE seule bibliothèque, Pomelo est recommandée et stable -->
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
+
+    <!-- Supprimer ces packages pour éviter conflit et doublons -->
+    <!-- <PackageReference Include="MySql.Data.EntityFramework" Version="9.1.0" /> -->
+    <!-- <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.3" /> -->
+
+    <!-- Swagger à jour -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.2" />
+
+    <!-- Tests -->
+    <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
 
   <ItemGroup>

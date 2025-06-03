@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DocVaultDbContext>(options => 
 {
-    options.UseMySql("server=localhost;port=8889;database=DocVault;user=root;password=root", new MySqlServerVersion(new Version(8, 0, 21)));
+    options.UseMySql("server=localhost;port=3306;database=DocVault;user=root;password=root", new MySqlServerVersion(new Version(8, 0, 21)));
 });
 builder.Services.AddScoped<AzureBlobService>();
 
